@@ -1,84 +1,66 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Finance Beta — Overview</title>
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <script defer src="./assets/js/main.js"></script>
-</head>
+---
+layout: default
+title: Overview
+---
 
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Finance Beta</h1>
-      <p class="subhead">Overview + subpages + financial literacy + interactive visuals + video space</p>
+<section class="hero">
+  <div class="hero-inner">
+    <p class="pill">Finance Beta</p>
+    <h2>Learn the building blocks of money—fast.</h2>
+    <p class="lead">
+      Overview hub with subpages for investing, credit, and banking—each tied to
+      financial literacy and short-form video explainers.
+    </p>
 
-      <nav class="nav">
-        <a href="./index.html" aria-current="page">Overview</a>
-        <a href="./investing/index.html">ETFs & Stocks</a>
-        <a href="./credit/index.html">Credit</a>
-        <a href="./banking/index.html">Saving / CDs / Checking</a>
-      </nav>
+    <div class="cta-row">
+      <a class="btn primary" href="{{ '/investing' | relative_url }}">Start: ETFs & Stocks</a>
+      <a class="btn" href="{{ '/credit' | relative_url }}">Build credit</a>
+      <a class="btn" href="{{ '/banking' | relative_url }}">Set up savings</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main class="container">
-    <section class="grid">
-      <a class="card" href="./investing/index.html">
-        <h2>ETFs & Stocks</h2>
-        <p>Basics, risk/return, diversification, and how accounts connect to long-term goals.</p>
-      </a>
+<section class="section">
+  <h3>Choose a track</h3>
+  <div class="cards">
+    <a class="card" href="{{ '/investing' | relative_url }}">
+      <h4>ETFs & Stocks</h4>
+      <p>Diversification, risk/return, long-term growth, and common mistakes.</p>
+      <span class="link">Explore →</span>
+    </a>
 
-      <a class="card" href="./credit/index.html">
-        <h2>Credit Cards & Credit Score</h2>
-        <p>Utilization, on-time payments, APR, and building credit safely.</p>
-      </a>
+    <a class="card" href="{{ '/credit' | relative_url }}">
+      <h4>Credit Cards & Credit Score</h4>
+      <p>Utilization, payment history, APR, and building credit safely.</p>
+      <span class="link">Explore →</span>
+    </a>
 
-      <a class="card" href="./banking/index.html">
-        <h2>Saving / CDs / Checking</h2>
-        <p>Emergency fund, interest, CDs vs HYSA, and cash-flow basics.</p>
-      </a>
-    </section>
+    <a class="card" href="{{ '/banking' | relative_url }}">
+      <h4>Saving / CDs / Checking</h4>
+      <p>Emergency fund, HYSA vs CDs, budgeting, and cash flow basics.</p>
+      <span class="link">Explore →</span>
+    </a>
+  </div>
+</section>
 
-    <section class="panel">
-      <h2>Interactive snapshot (Beta)</h2>
-      <p class="muted">This chart is a placeholder—swap in your own data and visuals.</p>
-      <canvas id="overviewChart" height="120"></canvas>
-    </section>
+<section class="section split">
+  <div>
+    <h3>Financial literacy pages</h3>
+    <p class="muted">Each topic includes a connected literacy page: vocabulary, rules of thumb, and pitfalls.</p>
+    <ul class="list">
+      <li><a href="{{ '/literacy-investing' | relative_url }}">Investing literacy</a></li>
+      <li><a href="{{ '/literacy-credit' | relative_url }}">Credit literacy</a></li>
+      <li><a href="{{ '/literacy-banking' | relative_url }}">Banking literacy</a></li>
+    </ul>
+  </div>
 
-    <section class="panel">
-      <h2>Video explainers (TikTok-style)</h2>
-      <p class="muted">Add TikTok embeds or links here. Beta uses placeholder cards.</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>What is an ETF?</h3>
-          <p>Short explainer video link/embed goes here.</p>
-          <a class="button" href="./investing/index.html#videos">Add videos</a>
-        </div>
-        <div class="card">
-          <h3>Credit utilization in 60 seconds</h3>
-          <p>Short explainer video link/embed goes here.</p>
-          <a class="button" href="./credit/index.html#videos">Add videos</a>
-        </div>
-        <div class="card">
-          <h3>Emergency fund rule of thumb</h3>
-          <p>Short explainer video link/embed goes here.</p>
-          <a class="button" href="./banking/index.html#videos">Add videos</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container muted">
-      <small>Finance Beta — educational content only; not financial advice.</small>
+  <div class="video-panel">
+    <h3>Video explainers</h3>
+    <p class="muted">Add TikTok-style embeds or links here.</p>
+    <div class="video-grid">
+      <div class="video-card">ETF in 60 seconds (embed)</div>
+      <div class="video-card">Credit utilization (embed)</div>
+      <div class="video-card">Emergency fund (embed)</div>
     </div>
-  </footer>
-
-  <!-- Chart.js via CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script defer src="./assets/js/charts.js"></script>
-</body>
-</html>
+  </div>
+</section>
