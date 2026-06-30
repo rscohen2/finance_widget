@@ -1,0 +1,89 @@
+---
+layout: default
+title: Credit Dashboard
+---
+
+<section class="dash-hero">
+  <div>
+    <h2>Credit Score Report (Beta)</h2>
+    <p class="muted">Educational simulator. No bureau data is used or stored.</p>
+  </div>
+  <div class="pill-row">
+    <button class="chip" data-profile="new">New to credit</button>
+    <button class="chip" data-profile="good">Good profile</button>
+    <button class="chip" data-profile="rebuild">Rebuilder</button>
+  </div>
+</section>
+
+<section class="dash-grid">
+  <div class="panel">
+    <h3>Score</h3>
+    <div class="score-row">
+      <div class="score-gauge">
+        <div class="gauge-bar">
+          <div id="gaugeFill" class="gauge-fill"></div>
+        </div>
+        <div class="gauge-labels">
+          <span>300</span><span>580</span><span>670</span><span>740</span><span>850</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="score-big"><span id="scoreValue">--</span></div>
+        <div id="scoreBand" class="score-band">—</div>
+        <div class="muted">Estimated score based on your inputs</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Key inputs</h3>
+
+    <label class="field">
+      <span>Total credit limit ($)</span>
+      <input id="limit" type="number" min="0" step="50" value="5000">
+    </label>
+
+    <label class="field">
+      <span>Total balance ($)</span>
+      <input id="balance" type="number" min="0" step="50" value="900">
+    </label>
+
+    <label class="field">
+      <span>On-time payment rate (%)</span>
+      <input id="payrate" type="range" min="80" max="100" value="100">
+      <div class="muted"><span id="payrateVal">100</span>%</div>
+    </label>
+
+    <label class="field">
+      <span>Hard inquiries (last 12 mo.)</span>
+      <input id="inq" type="range" min="0" max="8" value="1">
+      <div class="muted"><span id="inqVal">1</span></div>
+    </label>
+
+    <label class="field">
+      <span>Oldest account age (years)</span>
+      <input id="age" type="range" min="0" max="20" value="3">
+      <div class="muted"><span id="ageVal">3</span> years</div>
+    </label>
+
+    <div class="row">
+      <div class="muted">Utilization:</div>
+      <div><strong id="utilVal">--%</strong></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Factors (Beta weighting)</h3>
+    <canvas id="factorsChart" height="140"></canvas>
+  </div>
+
+  <div class="panel">
+    <h3>Trend (sample)</h3>
+    <canvas id="trendChart" height="140"></canvas>
+  </div>
+</section>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="{{ '/assets/js/credit-dashboard.js' | relative_url }}"></script>
