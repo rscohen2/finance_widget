@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+  <script defer src="{{ '/assets/js/charts.js' | relative_url }}"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      {% include nav.html %}
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container muted">
+      <small>Educational only; not financial advice.</small>
+    </div>
+  </footer>
+</body>
+</html>
