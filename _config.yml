@@ -1,0 +1,4 @@
+title: Finance Beta
+baseurl: "/finance_widget   # <-- change to your repo name
+url: "https://username.github.io"
+theme: minima
