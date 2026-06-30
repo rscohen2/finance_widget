@@ -1,4 +1,4 @@
 title: Finance Beta
-baseurl: "/finance_widget   # <-- change to your repo name
 url: "https://rscohen2.github.io"
+baseurl: "/finance_widget"
 theme: minima
